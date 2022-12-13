@@ -33,6 +33,8 @@ jobs:
       #     secrets_env: production
       #     file_name_prod: .env
       
-      - run: ls -la
+      - run: pwd
 
-      - run: cat .env
+      - run: ls -la /home/runner/work/
+
+      - run: cat /home/runner/work/.env
