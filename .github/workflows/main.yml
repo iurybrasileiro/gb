@@ -19,7 +19,7 @@ jobs:
       - uses: shine1594/secrets-to-env-action@master
         with:
           secrets: ${{ toJSON(secrets) }}
-          secrets_env: production
+          secrets_env: all
           file_name_prod: .env
       
       - run: ls -la
