@@ -20,4 +20,7 @@ jobs:
         with:
           secrets: ${{ toJSON(secrets) }}
 
+      - name: Create .env file
+        uses: ozaytsev86/create-env-file@v1
+
       - run: ls -la
