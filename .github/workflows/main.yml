@@ -16,10 +16,8 @@ jobs:
       
       - uses: actions/checkout@v3
 
-      - uses: oNaiPs/secrets-to-env-action@v1
+      - uses: shine1594/secrets-to-env-action@master
         with:
           secrets: ${{ toJSON(secrets) }}
-      - run: |
-          echo .env
-
-      - run: cat .env
+          secrets_env: production
+          file_name_prod: .env
