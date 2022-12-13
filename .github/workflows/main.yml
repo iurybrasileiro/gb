@@ -23,3 +23,5 @@ jobs:
           file_name_prod: .env
       
       - run: ls -la
+
+      - run: cat .env
