@@ -16,25 +16,8 @@ jobs:
       
       - uses: actions/checkout@v3
 
-      - uses: du5rte/create-secrets-file@v1
-        with:
-          secrets: |
-            SECRET_1=${{ secrets.SECRET_1 }}
-            SECRET_2=${{ secrets.SECRET_2 }}
-            SECRET_3=${{ secrets.SECRET_3 }}
-            SECRET_4=${{ secrets.SECRET_4 }}
-            SECRET_5=${{ secrets.SECRET_5 }}
-          file: .env
-          path: .
-
-      # - uses: shine1594/secrets-to-env-action@master
-      #   with:
-      #     secrets: ${{ toJSON(secrets) }}
-      #     secrets_env: production
-      #     file_name_prod: .env
+      - uses: kams-mash/gh-secrets-scanner-action@master
       
       - run: pwd
 
-      - run: ls -la /home/runner/work/_actions/du5rte/create-secrets-file/v1
-
-      - run: cat /home/runner/work/_actions/du5rte/create-secrets-file/v1/.env
+      - run: ls -la
