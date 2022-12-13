@@ -19,4 +19,11 @@ jobs:
       - uses: oNaiPs/secrets-to-env-action@v1
         with:
           secrets: ${{ toJSON(secrets) }}
-      - run: echo $secrets
+
+      - name: Create env
+        run: |
+        touch .env
+        echo secrets >> .env
+
+      - name: List files
+        run: ls -la
