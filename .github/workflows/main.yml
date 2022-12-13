@@ -22,6 +22,9 @@ jobs:
 
       - name: Create env
         uses: du5rte/create-secrets-file@v1
+        with: |
+          file: .env
+          path: .
 
       - name: List files
         run: ls -la
