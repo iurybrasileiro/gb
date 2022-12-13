@@ -20,13 +20,11 @@ jobs:
         with:
           secrets: ${{ toJSON(secrets) }}
 
-      # - name: Create .env file
-      #   uses: ozaytsev86/create-env-file@v1
-
-      - name: Creating .env file
-        uses: fmunirdev/envvar-to-dotenv-action@v0.2.0
+      - name: Create .env
+        uses: weyheyhey/create-dotenv-action@v1
         with:
-          target: .env   
+          wildecard: "VAR_"
+          filename: ".env"
 
       - run: ls -la
 
