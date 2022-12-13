@@ -24,6 +24,8 @@ jobs:
             SECRET_3=${{ secrets.SECRET_3 }}
             SECRET_4=${{ secrets.SECRET_4 }}
             SECRET_5=${{ secrets.SECRET_5 }}
+          file: .env
+          path: .
 
       # - uses: shine1594/secrets-to-env-action@master
       #   with:
