@@ -22,8 +22,8 @@ jobs:
 
       - name: Create env
         run: |
-        touch .env
-        echo secrets >> .env
+          touch .env
+          echo secrets >> .env
 
       - name: List files
         run: ls -la
