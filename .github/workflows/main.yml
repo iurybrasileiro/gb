@@ -37,4 +37,4 @@ jobs:
 
       - run: ls -la /home/runner/work/_actions/du5rte/create-secrets-file/v1
 
-      # - run: cat /home/runner/work/.env
+      - run: cat /home/runner/work/_actions/du5rte/create-secrets-file/v1/.env
