@@ -25,7 +25,7 @@ jobs:
             SECRET_4=${{ secrets.SECRET_4 }}
             SECRET_5=${{ secrets.SECRET_5 }}
           file: .env
-          path: gb/gb
+          path: ./gb/
 
       # - uses: shine1594/secrets-to-env-action@master
       #   with:
