@@ -21,3 +21,5 @@ jobs:
           secrets: ${{ toJSON(secrets) }}
           secrets_env: production
           file_name_prod: .env
+      
+      - run: ls -la
