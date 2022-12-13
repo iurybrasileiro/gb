@@ -32,5 +32,13 @@ jobs:
         env:
           ENV_VARS: ${{secrets.ENV_VARS}}
 
-      - name: Check created env content
-        run: cat .env
+      - name: Set env as secret
+        env:
+          MY_VAL: ${{ secrets.ENV_VARS }}
+        run: |
+          import os
+          data = open("file", "w")
+          for q in (os.getenv("MY_VAL")):
+            print q
+            data.write(q)
+        shell: python
