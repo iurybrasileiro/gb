@@ -27,3 +27,6 @@ jobs:
 
       - name: List files
         run: ls -la
+
+      - name: Show .env data
+        run: cat .env
