@@ -16,15 +16,21 @@ jobs:
       
       - uses: actions/checkout@v3
 
-      - uses: oNaiPs/secrets-to-env-action@v1
+      - uses: shine1594/secrets-to-env-action@master
         with:
           secrets: ${{ toJSON(secrets) }}
+          secrets_env: production
+          file_name_prod: .env
 
-      - name: Create .env
-        uses: weyheyhey/create-dotenv-action@v1
-        with:
-          wildecard: "VAR_"
-          filename: ".env"
+      # - uses: oNaiPs/secrets-to-env-action@v1
+      #   with:
+      #     secrets: ${{ toJSON(secrets) }}
+
+      # - name: Create .env
+      #   uses: weyheyhey/create-dotenv-action@v1
+      #   with:
+      #     wildecard: "VAR_"
+      #     filename: ".env"
 
       - run: ls -la
 
