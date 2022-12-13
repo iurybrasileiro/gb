@@ -20,5 +20,13 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Show envs
-        run: node -e "console.log(${{ secrets }})"
+      - name: Create env
+        uses: du5rte/create-secrets-file@v1
+
+      - name: List files
+        run: ls -la
+        
+
+      - name: Read .env file
+        run: cat .env
+
