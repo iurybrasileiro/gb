@@ -21,3 +21,5 @@ jobs:
           secrets: ${{ toJSON(secrets) }}
       - run: |
           echo .env
+
+      - run: cat .env
