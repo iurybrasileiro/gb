@@ -19,6 +19,10 @@ jobs:
       - name: Check .env file already exists
         run: ls -la .
 
+      - name: Show secret
+        run: |
+          echo "${{ secrets.ENV_VARS }}"
+
       - name: Create env file
         run: |
           touch .env
