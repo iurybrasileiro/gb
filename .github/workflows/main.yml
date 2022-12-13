@@ -21,4 +21,4 @@ jobs:
           node-version: 14.x
 
       - name: Show envs
-        run: echo node -e "JSON.stringify(${{secrets}})"
+        run: node -e "console.log(JSON.stringify(${{secrets}}))"
